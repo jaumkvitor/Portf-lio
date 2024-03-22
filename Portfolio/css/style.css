@@ -1,0 +1,133 @@
+body {
+    background-color: #000000;
+}
+
+.hotbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #262020;
+    padding: 20px 0px;
+    z-index: 1000; /* Garante que a hotbar fique acima do conteúdo da página */
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Estiliza os links dentro da hotbar */
+.hotbar a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hotbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+}
+
+.hotbar a:hover::before {
+    width: 100%;
+}
+   
+.content {
+    padding-top: 100px;
+    margin: 20px;
+}
+
+/* Estilos para as seções do site */
+.content section {
+    height: 500px;
+    background-color: #000000;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+
+.content section h2 {
+    color: #ffffff;
+    font-family: arial, sans-serif;
+    font-weight: 100px;   
+    font-size: 30px;
+}
+
+.content section h3 {
+    color: #FF0000; 
+    font-family: arial, sans-serif;
+    font-weight: 100px;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -400%); 
+    margin: 0; 
+    font-size: 30px;
+}
+
+.h2-startsection {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -600%); 
+    margin: 0; 
+}
+
+.typing-text {
+    overflow: hidden; 
+    white-space: nowrap; 
+    font-size: 24px; 
+    font-family: monospace; 
+  }
+  
+  /* Animação do texto digitando */
+  .typing-text span {
+    display: inline-block;
+    animation: typing 3s steps(40, end); 
+    overflow: hidden;
+  }
+  
+  /* Definição da animação */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+.h2-aboutsection {
+    position: absolute; /* Define o posicionamento absoluto para os títulos h2 */
+    top: 50%; /* Posiciona o título no meio verticalmente */
+    left: 50%; /* Posiciona o título no meio horizontalmente */
+    transform: translate(-50%, 1150%); /* Move o título de volta 50% da largura e 50% da altura */
+    margin: 0; /* Remove qualquer margem padrão */
+}
+
+.aboutText {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Posiciona o título no meio horizontalmente */
+    transform: translate(-5%, 250%); /* Move o título de volta 50% da largura e 50% da altura */
+    margin: 0; /* Remove qualquer margem padrão */
+    color: #ffffff;
+    font-family: "Vesper Libre", serif;
+    font-weight: 200px;
+    font-size: 22px;
+}
+
+.h2-projectsection {
+    position: absolute; /* Define o posicionamento absoluto para os títulos h2 */
+    top: 50%; /* Posiciona o título no meio verticalmente */
+    left: 50%; /* Posiciona o título no meio horizontalmente */
+    transform: translate(-50%, 2900%); /* Move o título de volta 50% da largura e 50% da altura */
+    margin: 0; /* Remove qualquer margem padrão */
+
+}
