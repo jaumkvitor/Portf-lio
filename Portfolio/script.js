@@ -28,3 +28,4 @@ function scrollToSection(sectionId, offset = 70) { // Assumindo 70 como o desloc
         });
     }
 }
+

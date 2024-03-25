@@ -89,7 +89,7 @@ body {
   /* Animação do texto digitando */
   .typing-text span {
     display: inline-block;
-    animation: typing 3s steps(40, end); 
+    animation: typing 4s steps(40, end) infinite; 
     overflow: hidden;
   }
   
@@ -107,7 +107,7 @@ body {
     position: absolute; /* Define o posicionamento absoluto para os títulos h2 */
     top: 50%; /* Posiciona o título no meio verticalmente */
     left: 50%; /* Posiciona o título no meio horizontalmente */
-    transform: translate(-50%, 1150%); /* Move o título de volta 50% da largura e 50% da altura */
+    transform: translate(-50%, 1380%); /* Move o título de volta 50% da largura e 50% da altura */
     margin: 0; /* Remove qualquer margem padrão */
 }
 
@@ -115,7 +115,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%; /* Posiciona o título no meio horizontalmente */
-    transform: translate(-5%, 250%); /* Move o título de volta 50% da largura e 50% da altura */
+    transform: translate(-5%, 300%); /* Move o título de volta 50% da largura e 50% da altura */
     margin: 0; /* Remove qualquer margem padrão */
     color: #ffffff;
     font-family: "Vesper Libre", serif;
@@ -127,7 +127,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-250%, 70%);
+    transform: translate(-250%, 120%);
     margin: 0;
     border: 5px solid #9bbc0f;
     background-color: #8bac0f;
@@ -178,13 +178,187 @@ body {
   .stat span {
     color: #0f380f;
   }
+
+  .gameboy-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaço entre as imagens */
+    margin-top: 50px; /* Espaço acima do bloco de imagens */
+  }
+  
+  .gameboy-image {
+    width: 80px; /* Ajuste conforme necessário */
+    height: auto;
+  }
+
+  .image-container {
+    position: relative;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 280px; /* Ajuste conforme necessário */
+    left: 50%; /* Posiciona o texto no centro horizontal */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    color: #fff; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Borda arredondada */
+  }
   
 
 .h2-projectsection {
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    transform: translate(-50%, 2900%); 
+    transform: translate(-50%, 3500%); 
     margin: 0; 
 
+}
+
+.projectbox {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 450%); 
+  margin: 0; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  width: 800px;
+  height: 300px;
+  transition: all 400ms;
+}
+
+.projectbox:hover .box {
+  filter: grayscale(100%) opacity(24%);
+}
+
+.box {
+  position: relative;
+  background: var(--img) center center;
+  background-size: cover;
+  background-position: center center;
+  transition: all 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectbox .box:hover {
+  filter: grayscale(0%) opacity(100%);
+}
+
+.projectbox:has(.box-1:hover) {
+  grid-template-columns: 3fr1 1fr 1fr1;
+  cursor: pointer;
+}
+
+.projectbox:has(.box-2:hover) {
+  grid-template-columns: 1fr1 3fr 1fr1;
+  cursor: pointer;
+}
+
+.projectbox:has(.box-3:hover) {
+  grid-template-columns: 1fr1 1fr 3fr1;
+  cursor: pointer;
+}
+
+.box:nth-child(odd) {
+  transform: translateY(-16px);
+}
+
+.box:nth-child(even) {
+  transform: translateY(16px);
+}
+
+.box::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 20px;
+  background: #000;
+  color: white;
+  padding: 10px 10px 10px 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 400ms;
+}
+
+.box:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 400ms;
+}
+
+.h2-careersection {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 5570%); 
+  margin: 0; 
+
+}
+
+.education {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 5100%); 
+  margin: 0; 
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 4px; /* Borda arredondada */
+}
+
+.detailsEducation {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 9000%); 
+  margin: 0; 
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.courses {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 5600%); 
+  margin: 0; 
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 4px; /* Borda arredondada */
+}
+
+.detailsCourses1 {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 9800%); 
+  margin: 0; 
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.detailsCourses2 {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 10000%); 
+  margin: 0; 
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #fff;
 }
