@@ -1,219 +1,220 @@
 body {
-    background-color: #6cc1e0;
+  background-color: rgb(182, 232, 133);
 }
 
 .hotbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #262020;
-    padding: 20px 0px;
-    z-index: 1000; /* Garante que a hotbar fique acima do conteúdo da página */
-    justify-content: space-between;
-    text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #262020;
+  padding: 20px 0px;
+  z-index: 1000; /* Garante que a hotbar fique acima do conteúdo da página */
+  justify-content: space-between;
+  text-align: center;
 }
 
 /* Estiliza os links dentro da hotbar */
 .hotbar a {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    margin: 0 30px;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  margin: 0 30px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .hotbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fff;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
 }
 
 .hotbar a:hover::before {
-    width: 100%;
+  width: 100%;
 }
-   
+ 
 .content {
-    padding-top: 100px;
-    margin: 20px;
+  padding-top: 100px;
+  margin: 20px;
 }
 
 /* Estilos para as seções do site */
 .content section {
-    height: 600px;
-    background-color: #6179ff;
-    margin-bottom: 50px;
-    padding: 30px;
+  height: 600px;
+  background-color: rgb(61, 71, 51);
+  margin-bottom: 50px;
+  padding: 30px;
+  border-radius: 700px; /* Borda arredondada */
 }
 
 .content section h2 {
-    color: #ffffff;
-    font-family: arial, sans-serif;
-    font-weight: 100px;   
-    font-size: 30px;
+  color: #ffffff;
+  font-family: arial, sans-serif;
+  font-weight: 100px;   
+  font-size: 30px;
 }
 
 .content section h3 {
-    color: #FF0000; 
-    font-family: arial, sans-serif;
-    font-weight: 100px;
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -400%); 
-    margin: 0; 
-    font-size: 30px;
+  color: #FF0000; 
+  font-family: arial, sans-serif;
+  font-weight: 100px;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -400%); 
+  margin: 0; 
+  font-size: 30px;
 }
 
 .h2-startsection {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -600%); 
-    margin: 0; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -600%); 
+  margin: 0; 
 }
 
 .typing-text {
-    overflow: hidden; 
-    white-space: nowrap; 
-    font-size: 24px; 
-    font-family: monospace; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  font-size: 24px; 
+  font-family: monospace; 
+}
+
+/* Animação do texto digitando */
+.typing-text span {
+  display: inline-block;
+  animation: typing 4s steps(40, end) infinite; 
+  overflow: hidden;
+}
+
+/* Definição da animação */
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  /* Animação do texto digitando */
-  .typing-text span {
-    display: inline-block;
-    animation: typing 4s steps(40, end) infinite; 
-    overflow: hidden;
+  to {
+    width: 100%;
   }
-  
-  /* Definição da animação */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
+}
 
 .h2-aboutsection {
-    position: absolute; /* Define o posicionamento absoluto para os títulos h2 */
-    top: 50%; /* Posiciona o título no meio verticalmente */
-    left: 50%; /* Posiciona o título no meio horizontalmente */
-    transform: translate(-50%, 1380%); /* Move o título de volta 50% da largura e 50% da altura */
-    margin: 0; /* Remove qualquer margem padrão */
+  position: absolute; /* Define o posicionamento absoluto para os títulos h2 */
+  top: 50%; /* Posiciona o título no meio verticalmente */
+  left: 50%; /* Posiciona o título no meio horizontalmente */
+  transform: translate(-50%, 1380%); /* Move o título de volta 50% da largura e 50% da altura */
+  margin: 0; /* Remove qualquer margem padrão */
 }
 
 .aboutText {
-    position: absolute;
-    top: 50%;
-    left: 50%; /* Posiciona o título no meio horizontalmente */
-    transform: translate(-5%, 300%); /* Move o título de volta 50% da largura e 50% da altura */
-    margin: 0; /* Remove qualquer margem padrão */
-    color: #ffffff;
-    font-family: "Vesper Libre", serif;
-    font-weight: 200px;
-    font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-20%, 600px); /* Move o título de volta 50% da largura e 50% da altura */
+  margin: 0; /* Remove qualquer margem padrão */
+  color: #ffffff;
+  font-family: "Vesper Libre", serif;
+  font-weight: 200;
+  font-size: 22px;
 }
 
 .character-creation.gameboy {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-250%, 120%);
-    margin: 0;
-    border: 5px solid #9bbc0f;
-    background-color: #8bac0f;
-    width: 250px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 5px 5px 0px #0f380f;
-    margin: 20px;
-    font-family: 'Press Start 2P', cursive;
+  position: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(39%, 15%);
+  margin: 0;
+  border: 5px solid #9bbc0f;
+  background-color: #8bac0f;
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0px #0f380f;
+  margin: 20px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .character-info {
-    text-align: center;
-  }
-  
-  .avatar {
-    display: block;
-    margin: auto;
-    width: 100px;
-    height: 100px;
-    image-rendering: pixelated;
-  }
-  
-  .character-field label {
-    display: block;
-    margin: 10px 0;
-    color: #0f380f;
-  }
-  
-  .character-stats {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .stat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  
-  .stat-icon {
-    width: 20px;
-    height: auto;
-    margin-right: 5px;
-  }
-  
-  .stat span {
-    color: #0f380f;
-  }
+  text-align: center;
+}
 
-  .gameboy-images {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Espaço entre as imagens */
-    margin-top: 50px; /* Espaço acima do bloco de imagens */
-  }
-  
-  .gameboy-image {
-    width: 80px; /* Ajuste conforme necessário */
-    height: auto;
-  }
+.avatar {
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+}
 
-  .image-container {
-    position: relative;
-  }
-  
-  .image-text {
-    position: absolute;
-    top: 280px; /* Ajuste conforme necessário */
-    left: 50%; /* Posiciona o texto no centro horizontal */
-    transform: translateX(-50%); /* Centraliza horizontalmente */
-    color: #fff; /* Cor do texto */
-    font-size: 14px; /* Tamanho da fonte */
-    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
-    padding: 5px 10px; /* Espaçamento interno */
-    border-radius: 4px; /* Borda arredondada */
-  }
-  
+.character-field label {
+  display: block;
+  margin: 10px 0;
+  color: #0f380f;
+}
+
+.character-stats {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.stat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.stat-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.stat span {
+  color: #0f380f;
+}
+
+.gameboy-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaço entre as imagens */
+  margin-top: 50px; /* Espaço acima do bloco de imagens */
+}
+
+.gameboy-image {
+  width: 80px; /* Ajuste conforme necessário */
+  height: auto;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-text {
+  position: absolute;
+  top: 280px; /* Ajuste conforme necessário */
+  left: 50%; /* Posiciona o texto no centro horizontal */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  color: #fff; /* Cor do texto */
+  font-size: 14px; /* Tamanho da fonte */
+  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 4px; /* Borda arredondada */
+}
+
 
 .h2-projectsection {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, 3500%); 
-    margin: 0; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, 3500%); 
+  margin: 0; 
 
 }
 
@@ -222,7 +223,7 @@ body {
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, 450%); 
-  margin: 0; 
+  margin: 0;  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
@@ -232,161 +233,178 @@ body {
 }
 
 .projectbox:hover .box {
-  filter: grayscale(100%) opacity(24%);
+filter: grayscale(100%) opacity(24%);
 }
 
 .box {
-  position: relative;
-  background: var(--img) center center;
-  background-size: cover;
-  background-position: center center;
-  transition: all 400ms;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ position: relative;
+ background: var(--img) center center;
+ background-size: cover;
+ background-position: center center;
+ transition: all 400ms;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .projectbox .box:hover {
-  filter: grayscale(0%) opacity(100%);
+ filter: grayscale(0%) opacity(100%);
 }
 
 .projectbox:has(.box-1:hover) {
-  grid-template-columns: 3fr1 1fr 1fr1;
-  cursor: pointer;
+ grid-template-columns: 3fr1 1fr 1fr1;
+cursor: pointer;
 }
 
 .projectbox:has(.box-2:hover) {
-  grid-template-columns: 1fr1 3fr 1fr1;
-  cursor: pointer;
+ grid-template-columns: 1fr1 3fr 1fr1;
+ cursor: pointer;
 }
 
 .projectbox:has(.box-3:hover) {
-  grid-template-columns: 1fr1 1fr 3fr1;
-  cursor: pointer;
+ grid-template-columns: 1fr1 1fr 3fr1;
+ cursor: pointer;
 }
 
 .box:nth-child(odd) {
-  transform: translateY(-16px);
+ transform: translateY(-16px);
 }
 
 .box:nth-child(even) {
-  transform: translateY(16px);
+ transform: translateY(16px);
 }
 
 .box::after {
-  content: attr(data-text);
-  position: absolute;
-  bottom: 20px;
-  background: #000;
-  color: white;
-  padding: 10px 10px 10px 14px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  transform: translateY(60px);
-  opacity: 0;
-  transition: all 400ms;
+ content: attr(data-text);
+ position: absolute;
+ bottom: 20px;
+ background: #000;
+ color: white;
+ padding: 10px 10px 10px 14px;
+ letter-spacing: 4px;
+ text-transform: uppercase;
+ transform: translateY(60px);
+ opacity: 0;
+ transition: all 400ms;
 }
 
 .box:hover::after {
-  transform: translateY(0);
-  opacity: 1;
-  transition-delay: 400ms;
+ transform: translateY(0);
+ opacity: 1;
+ transition-delay: 400ms;
 }
 
 .h2-careersection {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 5570%); 
-  margin: 0; 
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform: translate(-50%, 5570%); 
+ margin: 0; 
 
 }
 
 .education {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 5100%); 
-  margin: 0; 
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
-  padding: 5px 10px; /* Espaçamento interno */
-  border-radius: 4px; /* Borda arredondada */
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform: translate(-50%, 5100%); 
+ margin: 0; 
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 25px;
+ color: #fff;
+ background-color: rgba(0, 0, 0, 0.7); 
+ padding: 5px 10px; 
+ border-radius: 4px; 
 }
 
 .detailsEducation {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 9000%); 
-  margin: 0; 
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #fff;
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform: translate(-50%, 9000%); 
+ margin: 0; 
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 20px;
+ color: #fff;
 }
 
 .courses {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 5600%); 
-  margin: 0; 
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
-  padding: 5px 10px; /* Espaçamento interno */
-  border-radius: 4px; /* Borda arredondada */
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform: translate(-50%, 5600%); 
+ margin: 0; 
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 25px;
+ color: #fff;
+ background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
+ padding: 5px 10px; /* Espaçamento interno */
+ border-radius: 4px; /* Borda arredondada */
 }
 
 .detailsCourses1 {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 9800%); 
-  margin: 0; 
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #fff;
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform: translate(-50%, 9800%); 
+ margin: 0; 
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 20px;
+ color: #fff;
 }
 
 .detailsCourses2 {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 10000%); 
-  margin: 0; 
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #fff;
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform: translate(-50%, 10000%); 
+ margin: 0; 
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 20px;
+ color: #fff;
 }
 
 .h2-contactsection {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 7700%); 
-  margin: 0; 
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform: translate(-50%, 7700%); 
+ margin: 0; 
 }
 
 .contacts {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, 1450%); 
-  margin: 0; 
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #fff;
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform: translate(-50%, 1450%); 
+ margin: 0; 
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 20px;
+ color: #fff;
 }
 
 .contacts a {
-  display: block;
-  margin-bottom: 10px; /* Adiciona margem entre os links */
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
+ display: block;
+ margin-bottom: 10px; /* Adiciona margem entre os links */
+ font-family:Arial, Helvetica, sans-serif;
+ font-size: 20px;
+ color: #fff;
+ text-decoration: none;
 }
+
+/* Melhorias para responsividade */
+@media (max-width: 768px) {
+  .content section {
+      /* Ajustes para telas menores */
+      padding: 15px;
+  }
+
+  .hotbar a {
+      margin: 0 10px; /* Reduz o espaço entre links para telas menores */
+      font-size: 18px; /* Tamanho de fonte menor para melhor ajuste */
+  }
+
+  /* Aqui você pode adicionar ajustes específicos para telas menores,
+  como alterar layout de grid, tamanhos de fonte, etc. */
+}
+
